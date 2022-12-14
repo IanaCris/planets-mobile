@@ -1,5 +1,5 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
-import { Button, FlatList, Text, TextInput, View } from "react-native";
+import { Button, FlatList, TextInput, View } from "react-native";
 import { useEffect, useState } from "react";
 import MoonItem from "../../components/MoonItem";
 

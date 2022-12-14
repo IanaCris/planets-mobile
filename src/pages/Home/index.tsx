@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 import { Planet } from '../../model/planet';
 import { getPlanets } from '../../services/planet.service';

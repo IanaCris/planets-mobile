@@ -12,13 +12,13 @@ const options = {
 
 export async function getPlanets() {
 
-    const list: Planet[] = await fetch(`${url}/planet/list`, options)
+    const list = await fetch(`${url}/planet/list`, options)
         .then(response => response.json())
         .catch(err => console.error(err));
     
-    list.sort((a,b) => a.id - b.id);
+    list.sort((a: any, b: any) => a.id - b.id);
 
-    list.map((item: any) => ({ 
+    return list.map((item: any) => ({ 
         id: item.id,
         key: item.key,
         name: item.name,
@@ -26,7 +26,5 @@ export async function getPlanets() {
         imgUrl: item.imgSrc[0].img,
         mass: item.basicDetails[0].mass,
         volume: item.basicDetails[0].volume,
-    } as Planet));
-
-    return list;
+    }))  as Planet[];
 }
